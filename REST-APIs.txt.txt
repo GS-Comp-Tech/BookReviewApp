@@ -1,0 +1,63 @@
+book review service
+
+----------User Management--------------
+
+	ADMIN, REVIEWER
+CreateUser name email password roles
+
+POST /user
+    {
+      "userid" : ""
+      "username" :"",
+      "email": "",
+      "password": ""
+    }
+
+GET /user	ADMIN
+GET /user/id
+PUT /user/id	ADMIN/REVIEWER
+DEL /user/id	ADMIN
+
+POST /login
+  {
+    "username": "",
+    "password": ""
+  }
+
+POST /logout
+
+
+----------Book Management--------------
+
+GET /book	first 20 books (change the criteria. latest books/top rated books)
+
+GET /book/id   more details
+		user rating reviewcomment date
+		calculate the avg book rating
+
+
+----------Book Management--------------
+bookid
+name
+user
+rating
+review
+date
+
+POST /review/bookid
+  {
+    user
+    rating
+    review
+    date
+  }
+
+GET /review/bookid	Pagination of first 20 user reviews
+
+GET /review/bookid/userid
+
+GET /review/bookid/avgrating
+
+PUT /review/bookid
+
+DEL /review/bookid
